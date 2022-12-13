@@ -1,5 +1,5 @@
 import React from 'react';
-import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
+import { GithubOutlined, LinkedinOutlined,MailOutlined } from '@ant-design/icons';
 import SoftEng from '../soft-eng.svg'
 import { Col, Row, Typography} from 'antd';
 
@@ -15,7 +15,7 @@ export const IntroSection = (): JSX.Element => (
                 <GithubOutlined className="introIcons" />
             </a>
         
-            <a className="svgAnchor" href="https://www.linkedin.com/in/jryan0/" target="_blank">
+            <a className="svgAnchor" href="https://www.linkedin.com/in/jryan0" target="_blank">
                 <LinkedinOutlined className="introIcons" />
             </a>
             </div>
@@ -23,7 +23,7 @@ export const IntroSection = (): JSX.Element => (
         </Col>
         <Col span={12}>
             <div className="mainAvatar">
-                <img style={{height: '100%'}} src={SoftEng}/>
+                <img style={{width: '100%'}} src={SoftEng}/>
             </div>
         </Col>
     </Row>

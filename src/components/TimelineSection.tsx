@@ -1,20 +1,33 @@
 import React from 'react';
 import { ClockCircleOutlined } from '@ant-design/icons';
-import { Timeline } from 'antd';
+import { Timeline, Row, Col } from 'antd';
+import AdventureSVG from '../adventure.svg'
 
 export const TimelineSection = (): JSX.Element => (
-  <Timeline mode="alternate" style={{marginTop: '64px'}}>
-    <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
-    <Timeline.Item color="green">Solve initial network problems 2015-09-01</Timeline.Item>
-    <Timeline.Item dot={<ClockCircleOutlined style={{ fontSize: '16px' }} />}>
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-      laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-      beatae vitae dicta sunt explicabo.
-    </Timeline.Item>
-    <Timeline.Item color="red">Network problems being solved 2015-09-01</Timeline.Item>
-    <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
-    <Timeline.Item dot={<ClockCircleOutlined style={{ fontSize: '16px' }} />}>
-      Technical testing 2015-09-01
-    </Timeline.Item>
-  </Timeline>
+  <Row justify="center">
+    <Col span={8}>
+      <div className='timeline_image'>
+        <img style={{width: '100%'}} src={AdventureSVG}/>
+      </div>
+
+    </Col>
+    <Col span={8}>
+        <Timeline className="timeline" mode="left" style={{marginTop: '64px', marginRight: '30%'}}>
+
+        <Timeline.Item label="August 2017">Worked as an IT Technician Trainee </Timeline.Item>
+
+        <Timeline.Item label="November 2022" color="green">Graduated from the Bachelor of Computer Science @ RMIT</Timeline.Item>
+
+        <Timeline.Item label="July 2021" color="blue">
+          Internship @ National Australia Bank
+        </Timeline.Item>
+
+        <Timeline.Item label="May 2022" color="red">Associate Engineer @ National Australia Bank</Timeline.Item>
+
+        <Timeline.Item color="grey" label="Present"/>
+
+      </Timeline>
+    </Col>
+  </Row>
+  
 );
